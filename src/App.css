@@ -1,0 +1,255 @@
+/* 🎨 APP-LEVEL STYLES */
+
+/* Hero Section */
+.hero-section {
+  background: #e9f3ff;
+  padding: 80px 0;
+}
+
+.hero-img {
+  height: 100vh; /* makes the image take full viewport height */
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .hero-img {
+    height: 300px;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Buttons, cards, etc. (optional styling area) */
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.custom-input {
+  border: 1px solid #dee2e6 !important;
+  border-radius: 10px !important;
+  font-size: 0.9rem !important;
+  padding: 0.4rem 0.8rem !important;
+  line-height: 1.4 !important;
+}
+
+.custom-input:focus {
+  border-color: #0d6efd !important;
+  box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25) !important;
+}
+
+.custom-search-btn {
+  background-color: #0d6efd !important;
+  border: none !important;
+  color: white !important;
+  font-size: 0.9rem !important;
+  border-radius: 10px !important;
+}
+
+.custom-search-btn:hover {
+  background-color: #0b5ed7 !important;
+}
+
+
+
+/* Top Doctors Section Enhancements */
+.doctors-section {
+  background: linear-gradient(180deg, #e9f3ff 0%, #f6faff 100%);
+}
+
+.cta-banner {
+  background: transparent !important;
+  box-shadow: none;
+}
+
+#doctors .section-title {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+#doctors .section-subtitle {
+  font-size: 0.95rem;
+}
+
+.btn-soft {
+  background: #f1f5ff;
+  border-color: #d9e4ff !important;
+  color: #0d6efd !important;
+}
+.btn-soft:hover {
+  background: #e6efff;
+}
+
+.doctor-card {
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+}
+.doctor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+.doctor-card .ratio img {
+  transition: transform 0.35s ease;
+}
+.doctor-card:hover .ratio img {
+  transform: scale(1.05);
+}
+
+/* Contact Section Polishing */
+.contact-section {
+  background: linear-gradient(180deg, #f6faff 0%, #ffffff 100%);
+}
+.contact-card {
+  background: #ffffff;
+  border: 1px solid #eef2f7;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #edf4ff;
+  color: #0d6efd;
+}
+.contact-form {
+  border: 1px solid #eef2f7;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+.contact-form .form-control {
+  border-radius: 12px;
+}
+.contact-form .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13,110,253,0.12);
+}
+.contact-form .btn {
+  background: linear-gradient(90deg, #0d6efd, #0a58ca);
+  border: none;
+  border-radius: 12px;
+  padding: 0.6rem 1.2rem;
+}
+.contact-form .btn:hover {
+  filter: brightness(1.05);
+}
+
+/* Service Section polish */
+.service-title {
+  letter-spacing: 0.2px;
+}
+.service-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #0d6efd, #6ea8fe);
+  margin: 10px auto 0;
+}
+.service-section .section-subtitle {
+  color: #6c757d;
+}
+.service-section .service-card {
+  border: 1px solid #eef2f7;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.service-section .service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+}
+.service-section .service-img {
+  border: 6px solid #f8faff;
+}
+
+/* Contact page enhancements */
+.contact-info-section {
+  background: #f7faff;
+}
+.contact-info-card {
+  /* Force gradient background over Bootstrap card default */
+  background: linear-gradient(135deg, #0d6efd 0%, #1565ff 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+.contact-info-card::before,
+.contact-info-card::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+}
+.contact-info-card::before {
+  width: 160px; height: 160px; right: -40px; top: -40px;
+}
+.contact-info-card::after {
+  width: 100px; height: 100px; right: 40px; bottom: -30px;
+}
+.contact-info-card .icon-badge {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: rgba(255,255,255,0.2);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.contact-form-section { background: #ffffff; }
+
+/* Center breadcrumb on Contact page */
+.contact-breadcrumb .breadcrumb {
+  display: flex;
+  justify-content: center;
+}
+
+/* Breadcrumb link styling: keep color, remove underline */
+/* Force-neutral breadcrumb link styles (override Bootstrap link blue) */
+.breadcrumb .breadcrumb-item > a,
+.breadcrumb .breadcrumb-item > a:link,
+.breadcrumb .breadcrumb-item > a:visited,
+.breadcrumb .breadcrumb-item > a:hover,
+.breadcrumb .breadcrumb-item > a:active,
+.breadcrumb .breadcrumb-item > a:focus {
+  color: #6c757d !important; /* match non-link crumb color */
+  text-decoration: none !important;
+}
+
+/* Ensure breadcrumb separator color matches text */
+.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: #6c757d;
+}
+
+.contact-card {
+  border: 1px solid #e3e3e3 !important;
+  background-color: #fff !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.contact-card:hover {
+  border-color: #0d6efd !important;
+  box-shadow: 0 6px 18px rgba(13, 110, 253, 0.15);
+  transform: translateY(-4px);
+}
+
+.contact-card .icon-circle {
+  border: 3px solid #fff;
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+.hover-icon:hover {
+  color: #0d6efd !important;
+  transform: scale(1.15);
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
+ 
+

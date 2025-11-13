@@ -1,0 +1,27 @@
+/* 🌍 GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🌐 ROOT + BODY FIXES */
+html, body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+}
+
+/* Remove Vite demo centering */
+body {
+  display: block !important;
+}
+
+/* Remove demo container limit */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
