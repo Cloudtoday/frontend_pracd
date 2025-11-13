@@ -17,7 +17,7 @@ export const setToken = (token) => {
       localStorage.removeItem(TOKEN_KEY);
       localStorage.removeItem(TOKEN_EXP_KEY);
     }
-  } catch (_) {}
+  } catch (err) {console.log(err)}
 };
 
 export const getToken = () => {
@@ -45,7 +45,7 @@ export const clearToken = () => {
   try {
     localStorage.removeItem(TOKEN_KEY);
     localStorage.removeItem(TOKEN_EXP_KEY);
-  } catch (_) {}
+  } catch (err) {console.log(err)}
 };
 
 // Auth APIs
@@ -97,7 +97,7 @@ export const logoutRequest = async () => {
   let responseData = { message: "Logged out" };
   try {
     responseData = await res.json();
-  } catch (_) {}
+  } catch (err) {console.log(err)}
 
   if (!res.ok) {
     throw new Error(responseData.message || "Logout failed");
@@ -194,9 +194,7 @@ export const getAdminStats = async () => {
     if (res.ok && data) {
       return data;
     }
-  } catch (_) {
-    // ignore and fall back
-  }
+  } catch (err) {console.log(err)}
   // Fallback: derive from existing endpoints
   // - totalAppointments from /api/appointment/
   // - activeDoctors/activePatients from /api/profile?status=Active
