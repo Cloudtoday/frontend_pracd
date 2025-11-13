@@ -87,7 +87,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router basename="/pracd">
+      <Router basename="/">
         <NavbarComponent
           user={this.state.user}
           onShowLogin={this.openLogin}
